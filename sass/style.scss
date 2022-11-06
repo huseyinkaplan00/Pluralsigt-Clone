@@ -1,0 +1,77 @@
+@import"./global/global";
+@import "./leftSide/leftSide";
+@import "./rightSide/rightSide";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+
+
+
+// diğer sass dosyalarında nedense burası çalışmıyor burayı sor
+@media screen and (min-width:1200px) {
+    #wrapper {
+        #left {
+            flex: 4;
+
+            #sign-in {
+                .or {
+                    .line {
+                        height: 1.5px;
+                    }
+                }
+            }
+        }
+
+        #right {
+            flex: 6;
+        }
+    }
+}
+
+// media query for mobile devices 
+@media screen and (max-width:768px) {
+    body {
+        // mobil cihazlarda aşşağıya kaydırabilelim diye
+        overflow: auto;
+    }
+
+    #wrapper {
+
+        #left {
+            justify-content: start;
+
+
+            #sign-in {
+                .logo {
+                    margin-bottom: 5vh;
+                }
+
+                form {
+                    padding-bottom: 0;
+
+                    div {
+                        .text-input {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+
+                .or {
+
+
+
+                    .line {
+                        height: 0.5px;
+
+                    }
+                }
+            }
+        }
+
+        #right {
+            display: none;
+
+        }
+
+
+    }
+}
